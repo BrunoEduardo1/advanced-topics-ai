@@ -8,15 +8,7 @@ Análise de gráficos
    Histograma
 ## Início 
 
-```bash
-# Instalar depêndencias
-npm install
-
-# Excuta o app em modo de desenvolvimento
-npm start
-# Abra http://localhost:3000 para vê-lo no browser
-
-```
+Abrir console do navegador e ver informações
 
 ## Informações
 
