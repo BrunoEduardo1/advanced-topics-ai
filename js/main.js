@@ -40,7 +40,6 @@ function filterOutliers(someArray) {
     var minValue = q1 - iqr*1.5;
     console.log('Max: '+maxValue);
 
-    // Then filter anything beyond or beneath these values.
     var filteredValues = values.filter(function(x) {
         return (x > maxValue) || (x < minValue);
     });
@@ -70,10 +69,7 @@ function eachValue(array) {
         }
         try{
         let median ="Median: "+math.median(data)+" Standard deviation : "+math.std(data);
-        boxplot(data,quantitatives[j][0], median);
-        //console.log("Median "+quantitatives[j][0]+": "+math.median(data));
-        //console.log("Standard deviation "+quantitatives[j][0]+": "+math.std(data));        
-        //console.log("Mean "+quantitatives[j][0]+": "+math.mean(data));
+        graphs(data,quantitatives[j][0], median);
         console.log("Outliers "+quantitatives[j][0]+": "+filterOutliers(data));
         }catch(e){
             console.log(e);
