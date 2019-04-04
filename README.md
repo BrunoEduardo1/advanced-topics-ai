@@ -12,6 +12,14 @@ Abrir console do navegador e ver informações
 
 ## Informações
 
+### Base de dados
+
+
+### Bibliotecas
+
+[Mathjs](https://github.com/oliver-moran/jimp)
+[jquery-csv](https://github.com/evanplaice/jquery-csv) 
+
 ### Autor
 
 Bruno Eduardo
@@ -19,8 +27,3 @@ Bruno Eduardo
 ### Versão
 
 1.0.0
-
-### Base de dados
-
-
-### Bibliotecas
