@@ -18,7 +18,8 @@ Abrir console do navegador e ver informações
 ### Bibliotecas
 
 [Mathjs](https://github.com/oliver-moran/jimp)
-[jquery-csv](https://github.com/evanplaice/jquery-csv) 
+[jquery-csv](https://github.com/evanplaice/jquery-csv)
+[D3](https://github.com/d3/d3)  
 
 ### Autor
 
