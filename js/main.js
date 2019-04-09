@@ -62,15 +62,19 @@ function processData(data) {
 
 function eachValue(array) {
     let j = 0;
+    let correlation = [];
     do{
         let data = [];
+        j % 2 ? null : correlation = [];     
         for (var i = array.length - 1; i >= 0; i--) {
             data.push(parseInt(array[i][quantitatives[j][1]]));
         }
         try{
         let median ="Median: "+math.median(data)+" Standard deviation : "+math.std(data);
         graphs(data,quantitatives[j][0], median);
-        console.log("Outliers "+quantitatives[j][0]+": "+filterOutliers(data));
+        //console.log("Outliers "+quantitatives[j][0]+": "+filterOutliers(data));
+        correlation.push(data);
+        j % 2 && console.log("Correlation: "+quantitatives[j-1][0]+" - "+quantitatives[j][0]+" = "+pearsonCorrelation(correlation,0,1));
         }catch(e){
             console.log(e);
         }

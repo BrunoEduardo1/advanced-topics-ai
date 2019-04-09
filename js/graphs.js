@@ -1,5 +1,4 @@
 function graphs(data,label,extraInfo) {
-console.log('a');
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 30, left: 40},
   width = 500 - margin.left - margin.right,
