@@ -62,24 +62,39 @@ function processData(data) {
 
 function eachValue(array) {
     let j = 0;
-    let correlation = [];
+    // let correlation = [];
+    let  correlationMatrix = [];
     do{
         let data = [];
-        j % 2 ? null : correlation = [];     
+        // j % 2 ? null : correlation = [];     
         for (var i = array.length - 1; i >= 0; i--) {
             data.push(parseInt(array[i][quantitatives[j][1]]));
         }
+            correlationMatrix[j] = data;
         try{
         let median ="Median: "+math.median(data)+" Standard deviation : "+math.std(data);
         graphs(data,quantitatives[j][0], median);
         //console.log("Outliers "+quantitatives[j][0]+": "+filterOutliers(data));
-        correlation.push(data);
-        j % 2 && console.log("Correlation: "+quantitatives[j-1][0]+" - "+quantitatives[j][0]+" = "+pearsonCorrelation(correlation,0,1));
+        // correlation.push(data);
+        // j % 2 && console.log("Correlation: "+quantitatives[j-1][0]+" - "+quantitatives[j][0]+" = "+pearsonCorrelation(correlation,0,1));
         }catch(e){
             console.log(e);
         }
         j++;
     }while(quantitatives.length > j);
+      correlogram(correlationMatrix);
+      for (let x = 0; x < correlationMatrix.length; x++) {   
+        for (let y = 0; y < correlationMatrix.length; y++) {   
+            console.log("Correlation: "+quantitatives[x][0]+" - "+quantitatives[y][0]+" = "+pearsonCorrelation(correlationMatrix,x,y))
+        }
+      }
+      /*Matrix({
+        container : '#my_dataviz2',
+        data      : correlationMatrix,
+        labels    : labels,
+        start_color : '#ffffff',
+        end_color : '#3498db'
+    });*/
 }
 
 $(document).ready(function() {
