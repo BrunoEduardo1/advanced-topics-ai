@@ -93,7 +93,7 @@ function eachValue(array) {
         data      : correlationMatrix,
         labels    : labels,
         start_color : '#ffffff',
-        end_color : '#3498db'
+        end_color : '#3498db' 
     });*/
 }
 
