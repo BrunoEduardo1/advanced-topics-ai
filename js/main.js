@@ -195,7 +195,7 @@ $(document).ready(function() {
             processData(data);
             chageNominaAttr(data);
             console.log(data);
-            newCsv(data);
+            // newCsv(data);
             eachValue(data);
             // console.table(data[0]);
         }
