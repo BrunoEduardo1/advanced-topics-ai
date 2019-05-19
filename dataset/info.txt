@@ -1,0 +1,123 @@
+{workclass: Array(7), scolarShip: Array(16), maritalStatus: Array(7), occupation: Array(14), relationship: Array(6), …}
+
+country: Array(41)
+	0: "United-States"
+	1: "Cuba"
+	2: "Jamaica"
+	3: "India"
+	4: "Mexico"
+	5: "Puerto-Rico"
+	6: "Honduras"
+	7: "England"
+	8: "Canada"
+	9: "Germany"
+	10: "Iran"
+	11: "Philippines"
+	12: "Poland"
+	13: "Columbia"
+	14: "Cambodia"
+	15: "Thailand"
+	16: "Ecuador"
+	17: "Laos"
+	18: "Taiwan"
+	19: "Haiti"
+	20: "Portugal"
+	21: "Dominican-Republic"
+	22: "El-Salvador"
+	23: "France"
+	24: "Guatemala"
+	25: "Italy"
+	26: "China"
+	27: "South"
+	28: "Japan"
+	29: "Yugoslavia"
+	30: "Peru"
+	31: "Outlying-US(Guam-USVI-etc)"
+	32: "Scotland"
+	33: "Trinadad&Tobago"
+	34: "Greece"
+	35: "Nicaragua"
+	36: "Vietnam"
+	37: "Hong"
+	38: "Ireland"
+	39: "Hungary"
+	40: "Holand-Netherlands"
+	length: 41
+
+maritalStatus: Array(7)
+	0: "Never-married"
+	1: "Married-civ-spouse"
+	2: "Divorced"
+	3: "Married-spouse-absent"
+	4: "Separated"
+	5: "Married-AF-spouse"
+	6: "Widowed"
+	length: 7
+
+occupation: Array(14)
+	0: "Adm-clerical"
+	1: "Exec-managerial"
+	2: "Handlers-cleaners"
+	3: "Prof-specialty"
+	4: "Other-service"
+	5: "Sales"
+	6: "Transport-moving"
+	7: "Farming-fishing"
+	8: "Machine-op-inspct"
+	9: "Tech-support"
+	10: "Craft-repair"
+	11: "Protective-serv"
+	12: "Armed-Forces"
+	13: "Priv-house-serv"
+	length: 14
+
+race: Array(5)
+	0: "White"
+	1: "Black"
+	2: "Asian-Pac-Islander"
+	3: "Amer-Indian-Eskimo"
+	4: "Other"
+	length: 5
+
+relationship: Array(6)
+	0: "Not-in-family"
+	1: "Husband"
+	2: "Wife"
+	3: "Own-child"
+	4: "Unmarried"
+	5: "Other-relative"
+	length: 6
+
+scolarShip: Array(16)
+	0: "Bachelors"
+	1: "HS-grad"
+	2: "11th"
+	3: "Masters"
+	4: "9th"
+	5: "Some-college"
+	6: "Assoc-acdm"
+	7: "7th-8th"
+	8: "Doctorate"
+	9: "Assoc-voc"
+	10: "Prof-school"
+	11: "5th-6th"
+	12: "10th"
+	13: "Preschool"
+	14: "12th"
+	15: "1st-4th"
+	length: 16
+
+sex: Array(2)
+	0: "Male"
+	1: "Female"
+	length: 2
+
+workclass: Array(7)
+	0: "State-gov"
+	1: "Self-emp-not-inc"
+	2: "Private"
+	3: "Federal-gov"
+	4: "Local-gov"
+	5: "Self-emp-inc"
+	6: "Without-pay"
+	length: 7

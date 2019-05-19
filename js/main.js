@@ -95,17 +95,89 @@ function eachValue(array) {
     });*/
 }
 
+function chageNominaAttr(data) {
+            
+    let found = [],
+        subti = [];
+    /* Objeto com as colunas a serem substituídas
+     * Percorre uma linha substituindo um atributo nominal pelo indice[número] atribuido a este
+     * ex
+        - goThroughColumns vai percorrer todas as colunas selecionando os valoeres distintos
+          e salvando no em ojbt de acordo com sua propriedade sefinida em label (data[1] -> objt.workclass['State-gov'] )
+        - workclass: data[1] vai receber  = objt['1'].indexOf('State-gov');
+     */
+    var objt = { 
+        workclass:[],
+        scolarShip:[],
+        maritalStatus:[],
+        occupation:[],
+        relationship: [],
+        race: [],
+        sex: [],
+        country: []
+
+    };
+
+    var label = { 
+        '1': 'workclass',
+        '3': 'scolarShip',
+        '5': 'maritalStatus',
+        '6': 'occupation',
+        '7': 'relationship',
+        '8': 'race',
+        '9': 'sex',
+        '11':'country'
+
+    };
+
+    //percorre cada coluna do array
+    function goThroughColumns(element, index, array) {
+
+        // console.log("a[" + index + "] = " + element);
+        
+        if (index != 0 && index != 2 && index != 4 && index != 10 && index != 12) {
+            //Se o valor atual é distinto dos valores anteriores
+            if (!objt[label[index]].find(item => item === element)) {
+                
+                found.push(element);
+
+                objt[label[index]].push(element);
+                
+            }
+            //Substituir o item em questão por um número
+            array[index] = objt[label[index]].indexOf(element);
+
+        }
+
+    }
+    //percorre cada linha do array
+    function goThroughRows(element, index, array) {
+        
+        // console.log("a[" + index + "] = " + element);
+        
+        element.forEach(goThroughColumns);
+
+    }
+
+    data.forEach(goThroughRows);
+    console.log(objt);
+    console.log(found);
+
+}
+
 $(document).ready(function() {
     let data = [];
     $.ajax({
     	type: "GET",
-    	url: "dataset/adult.data.csv",
+    	url: "https://raw.githubusercontent.com/BrunoEduardo1/advanced-topics-ai/master/dataset/adult.data.csv",
     	dataType: "text",
     	success: function(data) {
             data = $.csv.toArrays(data);
             processData(data);
-            eachValue(data);
-            console.table(data[0]);
+            chageNominaAttr(data);
+            console.log(data);
+            // eachValue(data);
+            // console.table(data[0]);
         }
     });
 });
