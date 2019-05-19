@@ -160,8 +160,27 @@ function chageNominaAttr(data) {
     }
 
     data.forEach(goThroughRows);
-    console.log(objt);
-    console.log(found);
+    //console.log(objt);
+    //console.log(found);
+
+}
+
+function newCsv(data) {
+    
+    // csvContent = "data:text/csv;charset=utf-8," + $.csv.fromArrays(data);
+    let csvContent = $.csv.fromArrays(data);
+    
+    blob = new Blob([csvContent], {type: "text/csv"}); href = window.URL.createObjectURL(blob); 
+    
+    var link = document.createElement("a");
+    
+    link.setAttribute("href", href);
+    
+    link.setAttribute("download", "newData.csv");
+    
+    document.body.appendChild(link); // Required for FF
+
+    link.click();
 
 }
 
@@ -176,7 +195,8 @@ $(document).ready(function() {
             processData(data);
             chageNominaAttr(data);
             console.log(data);
-            // eachValue(data);
+            newCsv(data);
+            eachValue(data);
             // console.table(data[0]);
         }
     });
