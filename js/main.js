@@ -2,9 +2,7 @@ var quantitatives = [
     ['age','0'],
     ['fnlwgt','2'],
     ['education-num','4'],
-    ['capital-gain','10'],
-    ['capital-loss','11'],
-    ['hours-per-week','12']
+    ['hours-per-week','10']
 ];
 function filterOutliers(someArray) {  
 
